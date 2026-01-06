@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(
+        135deg,
+        #c5e3ef,
+        #2f8baf
+    );
+    font-family: Arial, sans-serif;
+}
+
+
+/* Center the card */
+.app-body {
+    display: flex;
+    padding: 20px;     /* space from white card edges */
+    gap: 15px;         /* SPACE between left & right */
+}
+
+.app-card {
+    width: 80%;
+    max-width: 1000px;
+    min-height: 500px;
+    background: white;
+    margin: 60px auto;
+    border-radius: 12px;
+    padding: 30px;
+    overflow: hidden; 
+}
+
+/* Header: logo + name */
+.app-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.app-header img {
+    width: 40px;
+    height: 40px;
+}
+
+.app-header h2 {
+    color: #2f8baf;
+}
+
+/* Body layout */
+.app-body {
+    display: flex;
+    min-height: 350px;
+}
+
+/* Left column (small) */
+.left-column {
+    width: 30%;
+    padding: 20px;
+
+    background-color: #f2f2f2;   /* light gray */
+    margin-right: 15px;     /* SPACE you want */
+    border-radius: 8px;
+}
+
+
+/* Right column (main) */
+.right-column {
+    width: 70%;
+    padding: 20px;
+
+}
+.add-task-section h3 {
+    margin-bottom: 15px;
+    color: #1e3c72;
+}
+
+/* Input + button in one row */
+.task-input-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.task-input-row input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.task-input-row button {
+    padding: 10px 16px;
+    background-color: #2860c8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.task-input-row button:hover {
+    background-color: #3a61a4;
+}
+
+/* Placeholder task area */
+.task-list {
+    min-height: 200px;
+    border: 1px dashed #ccc;
+    border-radius: 6px;
+    padding: 15px;
+    color: #000000;
+}
+
+/* Task list container */
+.task-list {
+    max-height: 300px;          /* DOES NOT exceed right column */
+    overflow-y: auto;           /* Scroll appears */
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+/* Individual task item */
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 8px 10px;
+    margin-bottom: 8px;
+
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* Icon before task */
+.task-icon {
+    color: #1e3c72;
+    font-size: 16px;
+}
+.task-item {
+    display: flex;
+    justify-content: space-between; /* pushes ❌ to right */
+    align-items: center;
+
+    padding: 8px 10px;
+    margin-bottom: 8px;
+
+    background-color: #f9f9f9;
+    border-radius: 6px;
+}
+
+.completed {
+    color: #b8b1b1;      /* faint / light text */
+    font-weight: 400;
+}
+.pin {
+    cursor: pointer;
+    margin-right: 8px;
+    display: none;
+}
+
+/* show pin on hover */
+.task-item:hover .pin {
+    display: inline;
+}
+
+/* pinned task → pin always visible */
+.pinned .pin {
+    display: inline;
+}
+
+.menu-item {
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.menu-item:hover {
+    background-color: #ddd;
+}
+
+.menu-item.active {
+    background-color: #1e3c72;
+    color: white;
+}

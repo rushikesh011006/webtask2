@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-card">
+
+        <!-- Logo + App Name -->
+        <div class="app-header">
+            <img src="logo.png" alt="App Logo">
+            <h2>Task Manager</h2>
+        </div>
+
+        <!-- Two column layout -->
+        <div class="app-body">
+            <div class="left-column">
+    <div class="menu-item active" data-filter="home">🌟Home</div>
+    <div class="menu-item" data-filter="completed">☑️Completed</div>
+    <div class="menu-item" data-filter="pending"> 📝 Pending</div>
+    <div class="menu-item" data-filter="priority">📌Priority</div>
+            </div>
+
+            <div class="right-column">
+
+                <div class="add-task-section">
+    <h3>✍️Add Task</h3>
+
+    <div class="task-input-row">
+        <input type="text"  id="taskInput" placeholder="Enter your task..." />
+        
+        <button id="addTaskBtn">Add</button>
+    </div>
+
+    <div class="task-list" id="taskList">
+        <!-- Tasks will appear here later -->
+    </div>
+</div>
+
+               
+            </div>
+        </div>
+
+    </div>
+
+   
+
+    <script src="script.js"></script>
+</body>
+</html>
+
